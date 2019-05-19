@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" stylesheets="@CSS/Login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookkeepingClient.controller.LoginController">
+   <children>
+      <Pane fx:id="Pane" layoutX="49.0" layoutY="70.0" prefHeight="600.0" prefWidth="400.0" styleClass="backGround" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="75.0" layoutY="242.0" prefHeight="25.0" prefWidth="70.0" text="用户名:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="300.0" prefHeight="25.0" prefWidth="70.0" text=" 密  码:" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="UserName" layoutX="155.0" layoutY="243.0" prefHeight="25.0" prefWidth="161.0" />
+            <PasswordField fx:id="Password" layoutX="155.0" layoutY="301.0" prefHeight="25.0" prefWidth="161.0" />
+            <Button fx:id="SignIn" layoutX="75.0" layoutY="382.0" mnemonicParsing="false" onAction="#onClickSignIn" prefHeight="40.0" prefWidth="100.0" text="登  陆" textFill="#676767">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="Register" layoutX="220.0" layoutY="382.0" mnemonicParsing="false" onAction="#onClickRegister" prefHeight="40.0" prefWidth="100.0" text="注  册" textFill="#676767">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="LabelMsg" layoutX="158.0" layoutY="468.0" textFill="#ee4a4a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

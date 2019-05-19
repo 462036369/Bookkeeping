@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" stylesheets="@CSS/BookkeepingIncome.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookkeepingClient.controller.BookkeepingIncomeController">
+   <children>
+      <Pane fx:id="Pane" layoutY="55.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="50.0" prefWidth="400.0" styleClass="TopBox">
+               <children>
+                  <Label alignment="CENTER" layoutX="177.0" prefHeight="50.0" prefWidth="47.0" text="账  本" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ReturnButton" mnemonicParsing="false" onAction="#onClickReturn" prefHeight="50.0" prefWidth="50.0" styleClass="ReturnButton">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </Pane>
+            <Button fx:id="ExpenditureButton" layoutX="100.0" layoutY="55.0" mnemonicParsing="false" onAction="#onClickExpenditure" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: #ff5757;" styleClass="Expenditure" text="支    出" textFill="#ff5757">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="200.0" layoutY="55.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #fff; -fx-border-color: #aaa;" text="收    入" textFill="#aaaaaa">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></Button>
+            <Pane fx:id="BackLine" layoutY="85.0" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: #D08135;">
+               <children>
+                  <Label fx:id="TypeText" alignment="CENTER" prefHeight="50.0" prefWidth="100.0" text="工资" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Text" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="200.0" onAction="#keyBoardInput" onKeyPressed="#keyBoardInput" onKeyTyped="#keyBoardInput" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #D08135;" styleClass="Text">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Pane>
+      <Label fx:id="InComeOtherText" alignment="CENTER" layoutX="320.0" layoutY="325.0" prefHeight="30.0" prefWidth="80.0" text="其 他">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="TransferText" alignment="CENTER" layoutX="240.0" layoutY="325.0" prefHeight="30.0" prefWidth="80.0" text="转 账">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="InvestmentText" alignment="CENTER" layoutX="160.0" layoutY="325.0" prefHeight="30.0" prefWidth="80.0" text="投资收益">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="BorrowText" alignment="CENTER" layoutX="80.0" layoutY="325.0" prefHeight="30.0" prefWidth="80.0" text="借入款">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="JobText" alignment="CENTER" layoutY="325.0" prefHeight="30.0" prefWidth="80.0" text="兼 职">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ReimbursementText" alignment="CENTER" layoutX="320.0" layoutY="215.0" prefHeight="30.0" prefWidth="80.0" text="报 销">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="BonusText" alignment="CENTER" layoutX="240.0" layoutY="215.0" prefHeight="30.0" prefWidth="80.0" text="奖 金">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="LivingText" alignment="CENTER" layoutX="160.0" layoutY="215.0" prefHeight="30.0" prefWidth="80.0" text="生活费">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="RedPacketText" alignment="CENTER" layoutX="80.0" layoutY="215.0" prefHeight="30.0" prefWidth="80.0" text="收红包">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="WagesText" alignment="CENTER" layoutY="215.0" prefHeight="30.0" prefWidth="80.0" text="工 资" textFill="#ce8c23">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="InComeOther" layoutX="320.0" layoutY="245.0" mnemonicParsing="false" onAction="#onClickType" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #fff;" styleClass="InComeOther" text="10">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="Transfer" layoutX="240.0" layoutY="245.0" mnemonicParsing="false" onAction="#onClickType" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #fff;" styleClass="Transfer" text="9">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="Investment" layoutX="160.0" layoutY="245.0" mnemonicParsing="false" onAction="#onClickType" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #fff;" styleClass="Investment" text="8">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="Borrow" layoutX="80.0" layoutY="245.0" mnemonicParsing="false" onAction="#onClickType" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #fff;" styleClass="Borrow" text="7">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="Job" layoutY="245.0" mnemonicParsing="false" onAction="#onClickType" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #fff;" styleClass="Job" text="6">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="Reimbursement" layoutX="320.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickType" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #fff;" styleClass="Reimbursement" text="5">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="Bonus" layoutX="240.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickType" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #fff;" styleClass="Bonus" text="4">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="Living" layoutX="160.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickType" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #fff;" styleClass="Living" text="3">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="RedPacket" layoutX="80.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickType" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #fff;" styleClass="RedPacket" text="2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="Wages" layoutY="135.0" mnemonicParsing="false" onAction="#onClickType" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #fff;" styleClass="Wages" text="1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <textFill>
+            <RadialGradient centerX="1.0" centerY="1.0" proportional="false" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="TRANSPARENT" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <TextArea fx:id="NowMark" layoutX="250.0" layoutY="365.0" maxHeight="25.0" minHeight="25.0" onKeyPressed="#changeNowMark" onKeyTyped="#changeNowMark" prefHeight="25.0" prefWidth="150.0" promptText="当前备注" style="-fx-background-color: #fff; -fx-border-color: #eee;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <Button alignment="CENTER" layoutX="150.0" layoutY="365.0" mnemonicParsing="false" onAction="#addMarks" prefHeight="25.0" prefWidth="100.0" styleClass="AddMarks" text="添加备注">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <DatePicker fx:id="Date" layoutY="365.0" prefHeight="25.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <Pane layoutY="390.0" prefHeight="180.0" prefWidth="400.0">
+         <children>
+            <Button fx:id="Num1" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="100.0" text="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Num2" layoutX="100.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="100.0" text="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Num3" layoutX="200.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="100.0" text="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Num4" layoutY="45.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="100.0" text="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Num5" layoutX="100.0" layoutY="45.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="100.0" text="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Num6" layoutX="200.0" layoutY="45.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="100.0" text="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Num7" layoutY="90.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="100.0" text="7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Num8" layoutX="100.0" layoutY="90.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="100.0" text="8">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Num9" layoutX="200.0" layoutY="90.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="100.0" text="9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Num0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="200.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="BackSpace" layoutX="200.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="45.0" prefWidth="100.0" text="←">
+               <font>
+                  <Font name="System Italic" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="ReInput" layoutX="300.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="90.0" prefWidth="100.0" text="重置">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Determine" layoutX="300.0" layoutY="90.0" mnemonicParsing="false" onAction="#onClickNum" prefHeight="90.0" prefWidth="100.0" text="确定">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

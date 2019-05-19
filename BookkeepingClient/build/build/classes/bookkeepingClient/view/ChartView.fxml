@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" stylesheets="@CSS/Example.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookkeepingClient.controller.ChartController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="ReturnHome" alignment="BOTTOM_CENTER" onMouseClicked="#onClickHome" prefHeight="50.0" prefWidth="200.0" styleClass="TopLeftLabel" text="记    账" textAlignment="CENTER" textFill="#ea7676" textOverrun="CLIP">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label fx:id="Report" alignment="BOTTOM_CENTER" layoutX="200.0" prefHeight="50.0" prefWidth="200.0" styleClass="TopRightLabel" text="报    表" textFill="#8e9b9e">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <PieChart fx:id="AllChart" layoutY="90.0" prefHeight="400.0" prefWidth="400.0" />
+            <Label fx:id="caption" />
+            <RadioButton fx:id="AllButton" layoutX="50.0" layoutY="65.0" mnemonicParsing="false" prefWidth="100.0" text="总体图表" />
+            <RadioButton fx:id="TypeButton" layoutX="155.0" layoutY="65.0" mnemonicParsing="false" prefWidth="70.0" text="类型图表" />
+            <RadioButton fx:id="TimeButton" layoutX="250.0" layoutY="65.0" mnemonicParsing="false" prefWidth="100.0" text="支出时间图表" />
+            <Button alignment="CENTER" layoutY="525.0" mnemonicParsing="false" onAction="#returnExample" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: #fff; -fx-border-color: #ccc;" text="返回收支记录">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

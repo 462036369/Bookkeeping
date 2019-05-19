@@ -1,0 +1,56 @@
+.TopBox{
+	-fx-background-color:#f6f6f6;
+}
+.ReturnButton{
+	-fx-background-insets: 0;
+	-fx-background-color:#f6f6f6;
+	-fx-background-image : url("./Image/Return.png");
+}
+.Text{
+	-fx-text-fill:#fff;
+}
+.Expenditure{
+	-fx-background-color:#fff;
+}
+.Expenditure:hover{
+	-fx-background-color:#f6f6f6;
+}
+.Wages{
+	 -fx-background-image :url("./Image/WagesNow.png");
+}
+.RedPacket{
+	 -fx-background-image :url("./Image/RedPacket.png");
+}
+.Living{
+	-fx-background-image :url("./Image/Living.png");
+}
+.Bonus{
+	-fx-background-image :url("./Image/Bonus.png");
+}
+.Reimbursement{
+	-fx-background-image :url("./Image/Reimbursement.png");
+}
+.Job{
+	-fx-background-image :url("./Image/Job.png");
+}
+.Borrow{
+	-fx-background-image :url("./Image/Borrow.png");
+}
+.Investment{
+	-fx-background-image :url("./Image/Investment.png");
+}
+.Transfer{
+	-fx-background-image :url("./Image/Transfer.png");
+}
+.InComeOther{
+	-fx-background-image :url("./Image/InComeOther.png");
+}
+.AddMarks{
+	-fx-background-color:#fff;
+	-fx-border-color:#aaa;
+	-fx-background-radius:8;
+	-fx-border-radius:8;
+}
+.AddMarks:hover{
+	-fx-background-color:#efefef;
+}

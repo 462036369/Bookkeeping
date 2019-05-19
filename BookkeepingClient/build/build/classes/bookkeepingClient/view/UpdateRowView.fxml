@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookkeepingClient.controller.UpdateRowController">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: #eee;">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="金  额">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="MoneyText" layoutY="50.0" prefHeight="25.0" prefWidth="100.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: #eee;">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="用  处">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="Type" layoutY="50.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label fx:id="TypeText" alignment="CENTER" layoutY="75.0" prefHeight="25.0" prefWidth="100.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: #eee;">
+         <children>
+            <RadioButton fx:id="Income" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" text=" 收  入" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="类  型">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="Expenditure" layoutX="22.0" layoutY="45.0" mnemonicParsing="false" text=" 支  出" />
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" prefHeight="100.0" prefWidth="120.0" style="-fx-border-color: #eee;">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="120.0" text="时  间">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="Date" layoutY="50.0" prefWidth="120.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="420.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: #eee;">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="备  注">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="Mark" layoutY="30.0" prefHeight="70.0" prefWidth="100.0" />
+         </children>
+      </Pane>
+      <Button fx:id="Sure" alignment="CENTER" layoutX="525.0" layoutY="39.0" mnemonicParsing="false" prefWidth="70.0" text="确  定" />
+      <Label fx:id="MsgLabel" layoutX="530.0" layoutY="75.0" textFill="#fc1f1f" />
+   </children>
+</Pane>

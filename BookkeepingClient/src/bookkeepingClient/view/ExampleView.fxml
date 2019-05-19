@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" stylesheets="@CSS/Example.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookkeepingClient.controller.ExampleController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="400.0" styleClass="Background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="Table" fixedCellSize="50.0" layoutY="75.0" prefHeight="450.0" prefWidth="400.0">
+               <columns>
+                  <TableColumn fx:id="MoneyCol" editable="false" maxWidth="55.0" minWidth="55.0" prefWidth="55.0" sortable="false" style="-fx-alignment: center;" text="金额" />
+                  <TableColumn fx:id="TypeCol" editable="false" maxWidth="55.0" minWidth="55.0" prefWidth="55.0" sortable="false" style="-fx-alignment: center;" text="用处" />
+                  <TableColumn fx:id="ExpenditureOrIncomeCol" editable="false" maxWidth="45.0" minWidth="45.0" prefWidth="45.0" sortable="false" style="-fx-alignment: center;" text="类型" />
+                  <TableColumn fx:id="DateCol" editable="false" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" sortable="false" style="-fx-alignment: center;" text="时间" />
+                  <TableColumn fx:id="MarkCol" editable="false" maxWidth="95.0" minWidth="95.0" prefWidth="95.0" sortable="false" style="-fx-alignment: center;" text="备注" />
+                  <TableColumn fx:id="OperationCol" editable="false" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" sortable="false" style="-fx-alignment: center;" text="操作" />
+               </columns>
+               <styleClass>
+                  <String fx:value="Column" />
+                  <String fx:value="Background" />
+               </styleClass>
+            </TableView>
+            <DatePicker fx:id="ChoiceDate" layoutX="200.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label fx:id="ChoiceDateText" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" text="1990-01-01~2049-12-31" />
+            <Button layoutY="525.0" mnemonicParsing="false" onAction="#onClickChart" prefHeight="50.0" prefWidth="200.0" text="图    表">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="200.0" layoutY="525.0" mnemonicParsing="false" onAction="#onClickFile" prefHeight="50.0" prefWidth="200.0" text="导出/导入本地文件">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Label fx:id="Report" alignment="BOTTOM_CENTER" layoutX="200.0" prefHeight="50.0" prefWidth="200.0" styleClass="TopRightLabel" text="报    表" textFill="#8e9b9e">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="ReturnHome" alignment="BOTTOM_CENTER" onMouseClicked="#onClickHome" prefHeight="50.0" prefWidth="200.0" styleClass="TopLeftLabel" text="记    账" textAlignment="CENTER" textFill="#ea7676" textOverrun="CLIP">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+   </children>
+</AnchorPane>

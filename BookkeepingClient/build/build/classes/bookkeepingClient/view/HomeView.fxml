@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="Pane" prefHeight="600.0" prefWidth="400.0" stylesheets="@CSS/Home.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookkeepingClient.controller.HomeController">
+   <children>
+      <Pane fx:id="Pane" layoutX="-6.0" prefHeight="600.0" prefWidth="400.0" styleClass="backGround" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="MainButton" layoutX="125.0" layoutY="225.0" mnemonicParsing="false" onAction="#onClickMainButton" prefHeight="150.0" prefWidth="150.0" styleClass="MainButton">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="TopLeftLabel" text="记    账" textAlignment="CENTER" textFill="#8e9b9e" textOverrun="CLIP">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="Report" alignment="BOTTOM_CENTER" layoutX="200.0" onMouseClicked="#onClickReport" prefHeight="50.0" prefWidth="200.0" styleClass="TopRightLabel" text="报    表" textFill="#ea7676">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="Budget" alignment="CENTER" layoutX="100.0" layoutY="85.0" prefHeight="20.0" prefWidth="200.0" text="当前月消费预算：3000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" layoutX="150.0" layoutY="105.0" mnemonicParsing="false" onAction="#changeBudget" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #fff; -fx-border-color: #ccc;" text="修改预算">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="BudgetMsg" alignment="CENTER" layoutX="50.0" layoutY="160.0" prefHeight="15.0" prefWidth="300.0" text="您当月净支出不及预算一半，可以放开手脚" />
+            <Button alignment="CENTER" layoutX="100.0" layoutY="515.0" mnemonicParsing="false" onAction="#addActivity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-border-color: #ccc;" text="添加活动信息/备忘录">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Pane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

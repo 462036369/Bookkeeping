@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" stylesheets="@CSS/BookkeepingExpenditure.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookkeepingClient.controller.FileController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="400.0" styleClass="BackGround" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="OutText" alignment="TOP_LEFT" layoutX="25.0" layoutY="135.0" prefHeight="60.0" prefWidth="350.0" text="导出位置：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="OutPos" layoutX="25.0" layoutY="200.0" mnemonicParsing="false" onAction="#onClickOut" text="选择导出位置">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label fx:id="InText" alignment="TOP_LEFT" layoutX="25.0" layoutY="270.0" prefHeight="60.0" prefWidth="350.0" text="导入位置：">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="25.0" layoutY="337.0" mnemonicParsing="false" onAction="#onClickIn" text="选择导入文件">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="50.0" layoutY="420.0" mnemonicParsing="false" onAction="#onClickOutFile" text="导出成Excel文件">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="Msg" alignment="CENTER" layoutX="100.0" layoutY="480.0" prefWidth="200.0" textFill="#e84c4c">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="220.0" layoutY="420.0" mnemonicParsing="false" onAction="#onClickInFile" text="从Excel文件导入">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#returnToExample" prefHeight="50.0" prefWidth="50.0" styleClass="ReturnButton" stylesheets="@CSS/BookkeepingExpenditure.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label alignment="CENTER" layoutX="50.0" prefHeight="50.0" prefWidth="350.0" text="导入/导出文件">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

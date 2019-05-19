@@ -1,0 +1,22 @@
+.Column{
+	-fx-alignment: center;
+}
+.Background{
+	-fx-background-image : url("./Image/HomeBackGround.jpg");
+}
+.TopRightLabel{
+	-fx-border-color: transparent  transparent  #8e9b9e  #8e9b9e ;
+}
+.TopLeftLabel{
+	-fx-border-color: transparent transparent #ea7676  transparent;
+}
+.TopLeftLabel:hover{
+	-fx-text-fill:#ff5050;
+	-fx-border-color: transparent transparent #ff5050  transparent;
+	-fx-effect: dropshadow(three-pass-box, #ff0000, 1.0,0, 0, 0);
+}
+.table-row-cell{
+    -fx-cell-size: 50px;
+    -fx-max-height:50px;
+    -fx-alignment: center;
+}

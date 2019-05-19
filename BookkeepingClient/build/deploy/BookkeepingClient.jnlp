@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="BookkeepingClient.jnlp">
+  <information>
+    <title>BookkeepingClient</title>
+    <vendor>lalala</vendor>
+    <description>Bookkeeping</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="BookkeepingClient.jar" size="4449187" download="eager" />
+    <jar href="libs\poi-4.0.0.jar" size="2715721" download="eager" />
+    <jar href="libs\poi-ooxml-4.0.0.jar" size="1758061" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="bookkeepingClient.Main"  name="Bookkeeping" />
+  <update check="background"/>
+</jnlp>

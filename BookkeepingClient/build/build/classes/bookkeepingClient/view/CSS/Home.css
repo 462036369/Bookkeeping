@@ -1,0 +1,26 @@
+.MainButton{
+	-fx-background-radius:15;
+	-fx-border-radius: 15;
+	-fx-background-color: linear-gradient(to right,#00fffc,#fff600);  
+	-fx-background-image : url("./Image/MainButton.png");
+}
+.MainButton:hover{
+	-fx-effect: dropshadow(three-pass-box, #72b9da, 20.0,0, 0, 0);
+}
+.MainButton:pressed{
+	-fx-effect: dropshadow(three-pass-box, #72b9da, 40.0,0, 0, 0);
+}
+.backGround{
+	-fx-background-image : url("./Image/HomeBackGround.jpg");
+}
+.TopLeftLabel{
+	-fx-border-color: transparent  #8e9b9e  #8e9b9e  transparent;
+}
+.TopRightLabel{
+	-fx-border-color: transparent transparent #ea7676  transparent;
+}
+.TopRightLabel:hover{
+	-fx-text-fill:#ff5050;
+	-fx-border-color: transparent transparent #ff5050  transparent;
+	-fx-effect: dropshadow(three-pass-box, #ff0000, 1.0,0, 0, 0);
+}

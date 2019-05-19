@@ -1,0 +1,59 @@
+CREATE TABLE user(
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	userName VARCHAR(20) NOT NULL,
+	password VARCHAR(20) NOT NULL,
+	email VARCHAR(50),
+	phone VARCHAR(11),
+	budget INT	
+);
+#INSERT INTO user (userName,password) VALUES ('admin','123');
+CREATE TABLE type(
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	food INT DEFAULT 0,
+	traffic INT DEFAULT 0,
+	shopping INT DEFAULT 0,
+	live INT DEFAULT 0,
+	entertainment INT DEFAULT 0,
+	medicalCare INT DEFAULT 0,
+	education INT DEFAULT 0,
+	favor INT DEFAULT 0,
+	lend INT DEFAULT 0,
+	expenditureOther INT DEFAULT 0,
+	wages INT DEFAULT 0,
+	redPacket INT DEFAULT 0,
+	living INT DEFAULT 0,
+	bonus INT DEFAULT 0,
+	reimbursement INT DEFAULT 0,
+	job INT DEFAULT 0,
+	borrow INT DEFAULT 0,
+	investment INT DEFAULT 0,
+	transfer INT DEFAULT 0,
+	inComeOther INT DEFAULT 0,
+	FOREIGN KEY(id) references user(id)
+);
+CREATE TABLE log(
+	money INT DEFAULT 0,
+	type VARCHAR(30),
+	date VARCHAR(20),
+	mark TEXT,
+	userId INT,
+	FOREIGN KEY(userId) references user(id)
+)CHARSET=gbk;
+
+CREATE TABLE activity(
+	infomation TEXT,
+	time DATE,
+	userId int,
+	FOREIGN KEY(userId) references user(id)
+)CHARSET=gbk;
+
+
+
+
+
+
+
+
+
+
+

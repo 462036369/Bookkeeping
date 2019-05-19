@@ -1,0 +1,63 @@
+
+.TopBox{
+	-fx-background-color:#f6f6f6;
+}
+.ReturnButton{
+	-fx-background-insets: 0;
+	-fx-background-color:#f6f6f6;
+	-fx-background-image : url("./Image/Return.png");
+}
+.Text{
+	-fx-text-fill:#fff;
+}
+.inCome{
+	-fx-background-color:#fff;
+}
+.inCome:hover{
+	-fx-background-color:#f6f6f6;
+}
+.RadioButton{
+	-fx-background-image : url("./Image/Return.png");
+}
+.Food{
+	 -fx-background-image :url("./Image/FoodNow.png");
+}
+.Traffic{
+	 -fx-background-image :url("./Image/Traffic.png");
+}
+.Shopping{
+	-fx-background-image :url("./Image/Shopping.png");
+}
+.Live{
+	-fx-background-image :url("./Image/Live.png");
+}
+.Entertainment{
+	-fx-background-image :url("./Image/Entertainment.png");
+}
+.MedicalCare{
+	-fx-background-image :url("./Image/MedicalCare.png");
+}
+.Education{
+	-fx-background-image :url("./Image/Education.png");
+}
+.Favor{
+	-fx-background-image :url("./Image/Favor.png");
+}
+.Lend{
+	-fx-background-image :url("./Image/Lend.png");
+}
+.Other{
+	-fx-background-image :url("./Image/ExpenditureOther.png");
+}
+.AddMarks{
+	-fx-background-color:#fff;
+	-fx-border-color:#aaa;
+	-fx-background-radius:8;
+	-fx-border-radius:8;
+}
+.AddMarks:hover{
+	-fx-background-color:#efefef;
+}
+.BackGround{
+	-fx-background-image : url("./Image/HomeBackGround.jpg");
+}
